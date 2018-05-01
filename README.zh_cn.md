@@ -1,3 +1,7 @@
+组件化改造：
+==========================
+1、去掉mybatis的ORM依赖，改用spring-jdbc，2、引入spring-boot， 3、添加输入rest api
+
 UidGenerator
 ==========================
 [In English](README.md)
