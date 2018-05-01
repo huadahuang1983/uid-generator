@@ -1,8 +1,10 @@
 package com.baidu.fsg.uid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.baidu.fsg.uid.impl.CachedUidGenerator;
@@ -11,6 +13,8 @@ import com.baidu.fsg.uid.worker.DisposableWorkerIdAssigner;
 
 @Configuration
 @EnableConfigurationProperties(UidGeneratorProperties.class)
+@EnableAutoConfiguration
+@ComponentScan(basePackages="com.baidu.fsg.uid")
 public class UidGeneratorConfiguration {
 	
 	@Autowired	
